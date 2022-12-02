@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="812.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="libraryManager.userInterface.controllers.CreateAccountController">
+   <stylesheets>
+        <URL value="@/libraryManager/userInterface/assets/styles/create-account.css" />
+    </stylesheets>
+    <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="101.0" style="-fx-border-radius: 20px; -fx-background-radius: 20px;" GridPane.columnIndex="1" GridPane.columnSpan="7" GridPane.rowIndex="1" GridPane.rowSpan="8">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="71.0" prefWidth="71.0" stylesheets="@../assets/styles/welcome.css">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label blendMode="SRC_ATOP" contentDisplay="CENTER" layoutX="15.0" layoutY="36.0" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="39.0" prefWidth="292.0" style="-fx-background-color: linear-gradient(to bottom right, #4158D0 0%, #C850C0 46%, #FFCC70 100%); -fx-background-radius: 10; -fx-text-alignment: center;" text="Create your Account" textAlignment="CENTER" textFill="#360561">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <Button layoutX="11.0" layoutY="413.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="255.0" text="Create your Account." textFill="#05241e" />
+                  <TextField alignment="TOP_LEFT" blendMode="SRC_ATOP" layoutX="26.0" layoutY="110.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="179.0" promptText="ex: Ambe Felix Che" />
+                  <TextField alignment="TOP_LEFT" blendMode="SRC_ATOP" layoutX="26.0" layoutY="153.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="179.0" promptText="ex: ambefelix@gmail.com" />
+                  <PasswordField blendMode="SRC_ATOP" cache="true" layoutX="26.0" layoutY="279.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="179.0" promptText="Type in a password" />
+                  <TextField alignment="TOP_LEFT" blendMode="SRC_ATOP" layoutX="26.0" layoutY="194.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="179.0" promptText="ex: (+237)670893665" />
+                  <TextField alignment="TOP_LEFT" blendMode="SRC_ATOP" layoutX="26.0" layoutY="238.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="179.0" promptText="ex: ambeche" />
+                  <PasswordField blendMode="SRC_ATOP" cache="true" layoutX="26.0" layoutY="323.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="179.0" promptText="Retype in your password" />
+                  <Label blendMode="SRC_ATOP" cache="true" layoutX="211.0" layoutY="115.0" prefHeight="18.0" prefWidth="101.0" text="Full name" />
+                  <Label blendMode="SRC_ATOP" cache="true" layoutX="211.0" layoutY="284.0" prefHeight="18.0" prefWidth="101.0" text="Password" />
+                  <Label blendMode="SRC_ATOP" cache="true" layoutX="213.0" layoutY="243.0" prefHeight="18.0" prefWidth="101.0" text="Username" />
+                  <Label blendMode="SRC_ATOP" cache="true" layoutX="212.0" layoutY="198.0" prefHeight="18.0" prefWidth="101.0" text="Phone" />
+                  <Label blendMode="SRC_ATOP" cache="true" layoutX="204.0" layoutY="369.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="18.0" prefWidth="94.0" text="Recovery Question" />
+                  <Label blendMode="SRC_ATOP" cache="true" layoutX="216.0" layoutY="158.0" prefHeight="18.0" prefWidth="101.0" text="Email" />
+                  <Label blendMode="SRC_ATOP" cache="true" layoutX="198.0" layoutY="328.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="18.0" prefWidth="87.0" text="Confirm Password" />
+                  <ComboBox blendMode="SRC_ATOP" layoutX="27.0" layoutY="364.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="179.0" promptText="Choose Question...." visibleRowCount="5" />
+                  <Label blendMode="SRC_ATOP" layoutX="65.0" layoutY="84.0" text="All fields are required *" textFill="RED" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="348.0" prefWidth="237.0" style="-fx-background-color: linear-gradient(to bottom right, #4158D0 0%, #C850C0 46%, #FFCC70 100%); -fx-background-radius: 10px;">
+               <children>
+                  <Label layoutX="29.0" layoutY="165.0" text="Create User Account" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView blendMode="SRC_ATOP" fitHeight="113.0" fitWidth="200.0" layoutX="56.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/Books.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="14.0" layoutY="390.0" text="Already have an account?" />
+                  <Label layoutX="16.0" layoutY="419.0" text="Forgot your password? " />
+                  <Hyperlink fx:id="linkLogin" layoutX="150.0" layoutY="387.0" text="Sign in to your account here" />
+                  <Hyperlink fx:id="linkRecoverPassword" layoutX="142.0" layoutY="416.0" text="Recover password here." />
+               </children>
+            </AnchorPane>
+         </items>
+         <effect>
+            <DropShadow />
+         </effect>
+      </SplitPane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</GridPane>
