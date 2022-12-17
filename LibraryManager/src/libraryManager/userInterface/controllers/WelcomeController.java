@@ -35,7 +35,7 @@ public class WelcomeController implements Initializable {
            public void handle(ActionEvent event){
                Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                stage.setTitle("Kingston Library -  Log In.");
-               stage.setScene(controller.loadScene("Login"));
+               stage.getScene().setRoot(controller.loadScene("Login"));
                stage.setResizable(true);
                stage.setMaximized(true);
            }
@@ -47,7 +47,7 @@ public class WelcomeController implements Initializable {
                Stage stage = (Stage)(btnCreateAccount.getScene().getWindow());
                stage.setTitle("Kingston Library -  Create your account.");
                stage.setResizable(true);
-               stage.setScene(controller.loadScene("Create Account"));
+               stage.getScene().setRoot(controller.loadScene("Create Account"));
                stage.setResizable(true);
                stage.setMaximized(true);
            }

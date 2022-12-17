@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="LibraryManagerPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>libraryManager.models.Books</class>
+    <class>libraryManager.models.Accounts</class>
+    <class>libraryManager.models.Logs</class>
+    <class>libraryManager.models.Persons</class>
+    <class>libraryManager.models.Notifications</class>
+    <class>libraryManager.models.Person</class>
+    <class>libraryManager.models.Notification</class>
+    <class>libraryManager.models.Account</class>
+    <class>libraryManager.models.Log</class>
+    <class>libraryManager.models.Book</class>
+    <class>libraryManager.models.persons.User</class>
+    <class>libraryManager.models.persons.Staff</class>
+    <class>libraryManager.models.persons.SystemAdmin</class>
+    <class>libraryManager.models.BookIssue</class>
+    <class>libraryManager.models.BookCategory</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/library?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
+      <property name="javax.persistence.jdbc.user" value="lms.app"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="wJo9l6@YU^$4gH"/>
+    </properties>
+  </persistence-unit>
+</persistence>

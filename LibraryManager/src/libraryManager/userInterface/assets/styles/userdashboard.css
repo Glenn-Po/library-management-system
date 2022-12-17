@@ -1,7 +1,113 @@
-/*
- * Empty Stylesheet file.
- */
+@import url("main.css");
 
 .mainFxmlClass {
 
 }
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+
+
+/****************************************
+*
+* Dashboard Sidebar and Topbar
+*
+*********************************************/
+.topbar{
+	-fx-background-color: linear-gradient(to right, #4158D0 0%, #C850C0 46%, #4158D0 100%);
+}
+
+.searchbar{
+	-fx-background-image: url(../icons/search-purple.png);
+	-fx-background-size: 9%;
+	-fx-background-repeat: no-repeat;
+  	-fx-background-position: 98% center; /*right center*/
+}
+
+.username{
+	-fx-font-family: 'Poppins';
+	-fx-font-size: 24px;
+	-fx-font-weight: bold;
+}
+
+#sidebar{
+	-fx-background-color:  linear-gradient(to bottom right, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+	-fx-background-radius: 0px 50px 0px 0px;
+}
+
+#sidebar .mainaction{
+	/*-fx-background-color: #ffffff;*/
+	/*-fx-background-radius: 22px;*/
+	-fx-font-family: 'Poppins';
+	-fx-font-size: 24px;
+	-fx-cursor: pointer;
+}
+
+#sidebar .action{
+	-fx-background-radius: 0px;
+	-fx-background-color: transparent;
+	-fx-font-size: 18px;
+	-fx-cursor: pointer;
+	-fx-transition: 300ms ease-in-out;
+}
+
+#sidebar .action:hover, #sidebar .active{
+	/*-fx-border-width: 2px;
+	-fx-border-color: #4158D0;
+	-fx-text-fill: #FFFFFF;*/
+	-fx-background-color: #5ca1e1; 
+	/*-fx-box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);*/
+}
+
+#sidebar .iconaction{
+	-fx-border-color: #000;
+}
+#sidebar .iconaction:hover{
+	/*-fx-box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);*/
+	-fx-background-color: #00ff00;
+}
+
+
+/****************************************
+*
+* Dashboard - Home
+*
+*********************************************/
+
+
+
+/****************************************
+*
+* Dashboard - Profile
+*
+*********************************************/
+.username-txt{
+	-fx-background-image: url(../icons/mail-account-2.png);
+	-fx-background-size: 12%;
+	-fx-background-repeat: no-repeat;
+  	-fx-background-position: 2% center; 	
+}
+
+.phone-txt{
+	-fx-background-image: url(../icons/ringer.png);
+	-fx-background-size: 12%;
+	-fx-background-repeat: no-repeat;
+  	-fx-background-position: 2% center;
+}
+
+/****************************************
+*
+* Dashboard - My Books
+*
+*********************************************/
+
+
+
+
+/****************************************
+*
+* Dashboard - Home
+*
+*********************************************/

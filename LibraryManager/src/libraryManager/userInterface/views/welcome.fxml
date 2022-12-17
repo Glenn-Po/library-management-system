@@ -63,7 +63,7 @@
                   <Font size="36.0" />
                </font>
             </Label>
-            <Label layoutX="35.0" layoutY="56.0" minHeight="-Infinity" prefHeight="70.0" prefWidth="343.0" style="-fx-background-color: inherit;" text="Kingston Library ">
+            <Label layoutX="35.0" layoutY="56.0" minHeight="-Infinity" prefHeight="70.0" prefWidth="343.0" style="-fx-background-color: inherit;" text="Kingston Library " wrapText="true">
                <font>
                   <Font name="System Bold" size="42.0" />
                </font>
@@ -98,9 +98,9 @@
       </Pane>
       <FlowPane alignment="TOP_CENTER" orientation="VERTICAL" prefHeight="55.0" prefWidth="163.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="6" GridPane.rowSpan="2">
          <children>
-            <Hyperlink text="Our Terms of Service" />
-            <Hyperlink text="User Agreement" />
-            <Hyperlink text="Our Privacy policy" />
+            <Hyperlink blendMode="MULTIPLY" text="Our Terms of Service" />
+            <Hyperlink blendMode="MULTIPLY" text="User Agreement" />
+            <Hyperlink blendMode="MULTIPLY" text="Our Privacy policy" />
          </children>
       </FlowPane>
       <Button id="btnLogin" fx:id="btnLogin" layoutX="211.0" layoutY="435.0" mnemonicParsing="false" onAction="#gotoLogin" prefHeight="43.0" prefWidth="205.0" text="Login to Account" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="5">

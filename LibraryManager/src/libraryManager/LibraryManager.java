@@ -1,18 +1,11 @@
 
 package libraryManager;
 
-/**
- *
- * @author glenn-po
- */
-
-
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import libraryManager.userInterface.controllers.MainController;
-import libraryManager.utilities.properties.Config;
 
 public class LibraryManager extends Application {
 
@@ -20,13 +13,14 @@ public class LibraryManager extends Application {
     public void start(Stage primaryStage) throws Exception{
         try{
             
-            System.out.println("\n*** Welcome to Library Management Syste***\n");
-            Config config = new Config();
+            System.out.println("\n*** Welcome to Library Management System***\n");
+            
+            libraryManager.utilities.System system  = libraryManager.utilities.System.getSystem();
             primaryStage.setTitle("Kingston Library -  Welcome");
-            primaryStage.getIcons().add(new Image(config.getAppConfig().get("window-icon")));
+            primaryStage.getIcons().add(new Image(system.getSystemConfig().get("window-icon")));
             
             MainController controller = new MainController();
-            Scene scene = controller.loadScene("Welcome");
+            Scene scene = new Scene(controller.loadScene("Welcome"));
             
             primaryStage.setScene(scene);
             primaryStage.centerOnScreen();
@@ -41,6 +35,7 @@ public class LibraryManager extends Application {
     public static void main(String[] args) {
         
         launch(args);
+
     }
 }
 

@@ -2,6 +2,9 @@
  * Empty Stylesheet file.
  */
 
+.root{
+	-radio-color: #0000AA;
+}
 .mainFxmlClass {
 
 }

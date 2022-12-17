@@ -1,87 +1,307 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import java.net.URL?>
-<?import javafx.scene.control.Accordion?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="libraryManager.userInterface.controllers.UserDashboardController">
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="libraryManager.userInterface.controllers.UserDashboardController">
     <stylesheets>
         <URL value="@/libraryManager/userInterface/assets/styles/userdashboard.css" />
     </stylesheets>
    <children>
-      <Pane layoutY="14.0" prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: #aaa4;" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="14.0">
+      <AnchorPane fx:id="rootPane" layoutX="320.0" layoutY="120.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
          <children>
-            <Accordion layoutX="5.0" layoutY="160.0" prefHeight="76.0" prefWidth="250.0">
-              <panes>
-                <TitledPane animated="false" prefHeight="60.0" prefWidth="250.0" text="untitled 1">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </TitledPane>
-                <TitledPane animated="false" text="untitled 2">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </TitledPane>
-                <TitledPane animated="false" text="untitled 3">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </TitledPane>
-              </panes>
-            </Accordion>
+            <GridPane prefHeight="526.0" prefWidth="679.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="38.0" prefWidth="408.0" style="-fx-background-color: linear-gradient(to bottom right, #4158D0 0%, #C850C0 46%, #FFCC70 100%);; -fx-label-padding: 0px 5px 0px 15px; -fx-background-radius: 10px;" text="Your Books" GridPane.columnIndex="3" GridPane.columnSpan="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="38.0" prefWidth="408.0" style="-fx-label-padding: 0px 5px 0px 15px; -fx-background-radius: 10px;" text="Books You are currently holding" GridPane.columnIndex="1" GridPane.columnSpan="6" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane prefHeight="218.0" prefWidth="537.0" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.rowIndex="2" GridPane.rowSpan="3">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="9.0" layoutY="15.0" prefHeight="217.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="TOP_CENTER" layoutY="3.0" prefHeight="215.0" prefWidth="201.0" style="-fx-background-color: #0099FFAA; -fx-background-radius: 20px;" text="The Culinray tails of the 7 cooks of acient greece" textAlignment="CENTER" wrapText="true">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="120.0" fitWidth="135.0" layoutX="61.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/images/sample-book-cover-3.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Button layoutX="40.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Return Book">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="250.0" layoutY="20.0" prefHeight="217.0" prefWidth="200.0" AnchorPane.leftAnchor="250.0">
+                                 <children>
+                                    <Label alignment="TOP_CENTER" layoutY="1.0" prefHeight="215.0" prefWidth="201.0" style="-fx-background-color: #0099FFAA; -fx-background-radius: 20px;" text="The Culinray tails of the 7 cooks of acient greece" textAlignment="CENTER" wrapText="true">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="120.0" fitWidth="135.0" layoutX="61.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/images/sample-book-cover.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Button layoutX="40.0" layoutY="178.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Return Book">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="260.0" layoutY="30.0" prefHeight="217.0" prefWidth="200.0" AnchorPane.leftAnchor="502.0">
+                                 <children>
+                                    <Label alignment="TOP_CENTER" layoutY="-13.0" prefHeight="215.0" prefWidth="201.0" style="-fx-background-color: #0099FFAA; -fx-background-radius: 20px;" text="The Culinray tails of the 7 cooks of acient greece" textAlignment="CENTER" wrapText="true">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="120.0" fitWidth="135.0" layoutX="61.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/images/sample-book-cover-2.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Button layoutX="40.0" layoutY="165.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Return Book">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </ScrollPane>
+                  <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="38.0" prefWidth="408.0" style="-fx-label-padding: 0px 5px 0px 15px; -fx-background-radius: 10px;" text="Books You are have borrowed before" GridPane.columnIndex="1" GridPane.columnSpan="8" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.vgrow="NEVER" />
+               </children>
+            </GridPane>
          </children>
-         <effect>
-            <Lighting bumpInput="$null">
-               <light>
-                  <Light.Distant />
-               </light>
-            </Lighting>
-         </effect>
-      </Pane>
-      <Pane prefHeight="151.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom right, #4158D0 0%, #C850C0 46%, #FFCC70 100%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <effect>
-            <DropShadow />
-         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="279.0" layoutY="8.0" prefHeight="120.0" prefWidth="1000.0" styleClass="topbar" stylesheets="@../assets/styles/userdashboard.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="77.0" fitWidth="218.0" layoutX="30.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <TextField layoutX="340.0" layoutY="37.0" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="379.0" promptText="Search Book..." styleClass="searchbar" stylesheets="@../assets/styles/userdashboard.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <HBox alignment="CENTER" layoutX="707.0" layoutY="10.0" prefHeight="100.0" prefWidth="305.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="64.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/user-account.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+                  <Label styleClass="username" stylesheets="@../assets/styles/userdashboard.css" text="Alexander" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ImageView fitHeight="62.0" fitWidth="166.0" layoutX="15.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/images/Books.png" />
                </image>
+               <effect>
+                  <DropShadow />
+               </effect>
             </ImageView>
-            <Label layoutX="30.0" layoutY="91.0" text="Kingstonson Library">
+            <Label layoutX="14.0" layoutY="70.0" text="Kingston Library">
                <font>
-                  <Font name="System Bold" size="36.0" />
+                  <Font size="28.0" />
                </font>
                <textFill>
-                  <LinearGradient endX="1.0" endY="1.0">
+                  <LinearGradient endX="1.0" endY="0.1800947867298578" startY="0.6350710900473934">
                      <stops>
                         <Stop>
                            <color>
-                              <Color />
+                              <Color red="1.0" green="0.800000011920929" blue="0.43921568989753723" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.4664429530201342">
+                           <color>
+                              <Color red="0.7843137383460999" green="0.3137255012989044" blue="0.7529411911964417" />
                            </color>
                         </Stop>
                         <Stop offset="1.0">
                            <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
+                              <Color red="0.2549019753932953" green="0.3450980484485626" blue="0.8156862854957581" />
                            </color>
                         </Stop>
                      </stops>
                   </LinearGradient>
                </textFill>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <Pane id="sidebar" blendMode="SRC_ATOP" layoutY="118.0" prefHeight="546.0" prefWidth="320.0" stylesheets="@../assets/styles/userdashboard.css" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="118.0">
+         <children>
+            <Button fx:id="btnProfile" layoutX="-1.0" layoutY="192.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="320.0" styleClass="action" text="My Profile" textAlignment="RIGHT" />
+            <Button fx:id="btnBooks" layoutX="-1.0" layoutY="251.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="320.0" styleClass="action" text="My books" />
+            <Button fx:id="btnHome" layoutX="-1.0" layoutY="133.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="320.0" text="Dashboard">
+               <styleClass>
+                  <String fx:value="action" />
+                  <String fx:value="active" />
+               </styleClass></Button>
+            <Button fx:id="btnLoanBook" layoutY="37.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="312.0" styleClass="mainaction" text="Checkout a Book" textFill="#4914c4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/book.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnWishlist" layoutX="-1.0" layoutY="310.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="320.0" styleClass="action" text="My Book Wishlist" />
+            <Button fx:id="btnActions" layoutX="-1.0" layoutY="365.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="320.0" styleClass="action" text="Actions" />
+            <Pane layoutX="-24.0" layoutY="448.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="70.0" prefWidth="305.0">
+               <children>
+                  <Button layoutX="42.0" layoutY="11.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" styleClass="iconaction">
+                           <image>
+                              <Image url="@../assets/icons/settings-purple.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="125.0" layoutY="12.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="25.0">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="iconaction">
+                           <image>
+                              <Image url="@../assets/icons/alarm.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="209.0" layoutY="12.0" mnemonicParsing="false" prefWidth="53.0">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="iconaction">
+                           <image>
+                              <Image url="@../assets/icons/help.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <ImageView blendMode="MULTIPLY" fitHeight="48.0" fitWidth="46.0" layoutX="19.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons/book.png" />
+               </image>
+            </ImageView>
+            <ImageView blendMode="MULTIPLY" fitHeight="46.0" fitWidth="46.0" layoutX="19.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons/dashboard.png" />
+               </image>
+            </ImageView>
+            <ImageView blendMode="MULTIPLY" fitHeight="53.0" fitWidth="53.0" layoutX="19.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons/heart.png" />
+               </image>
+            </ImageView>
+            <ImageView blendMode="MULTIPLY" fitHeight="48.0" fitWidth="48.0" layoutX="19.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons/user-account.png" />
+               </image>
+            </ImageView>
+            <ImageView blendMode="MULTIPLY" fitHeight="46.0" fitWidth="48.0" layoutX="23.0" layoutY="371.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons/actions.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="14.0" layoutY="436.0" prefHeight="6.0" prefWidth="286.0" />
          </children>
       </Pane>
    </children>

@@ -1,12 +1,6 @@
 
 package libraryManager.userInterface.controllers;
 
-/**
- *
- * @author glenn-po
- */
-
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
@@ -15,21 +9,12 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Admin
- */
 public class MainController implements Initializable {
     
     private final Map<String, String> pages = new HashMap();
-    private final Map<String, String> components = new HashMap<>();
-    
+    private final Map<String, String> modalDialogs = new HashMap<>();
     public MainController(){
         super();
         
@@ -38,28 +23,20 @@ public class MainController implements Initializable {
         pages.put("Login", "../views/login.fxml");
         pages.put("Create Account", "../views/createAccount.fxml");
         pages.put("Recover Password", "../views/recoverpassword.fxml");
-        pages.put("Login", "../views/Login.fxml");
-        pages.put("Login", "../views/Login.fxml");
-        pages.put("Login", "../views/Login.fxml");
+        pages.put("User Dashboard", "../views/userDashboard.fxml");
+        pages.put("Admin Dashboard", "../views/userDashboard.fxml");
+        pages.put("Staff Dashboard", "../views/userDashboard.fxml");
         pages.put("Login", "../views/Login.fxml");
         
-        //components in the application
-        // |-> Window like components
-        components.put("Error PopUp", "../views/components/errorpopup.fxml");
-        components.put("Warning PopUp", "../views/components/errorpopup.fxml");
-        components.put("Success PopUp", "../views/components/errorpopup.fxml");
-        
-        // |-> Subview components
-        components.put("Sidebar", "../views/components/errorpopup.fxml");
-        components.put("Menubar", "../views/components/errorpopup.fxml");
-        
+        //Modals
+        modalDialogs.put("Product Properties", "../views/modalDialogs/software.fxml");
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) { 
     }
     
-    public Scene loadScene(String page){
+    public Parent loadScene(String page){
         Parent root = null;
         try{
             String path = pages.get(page);
@@ -73,7 +50,7 @@ public class MainController implements Initializable {
             System.exit(1);
         }
         
-        return new Scene(root);
+        return root;
 
     }
 
